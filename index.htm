@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="TachoChart">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="TachoChart">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <h1>Welcome to TachoChart</h1>
+
+  <div class="c-chart-container-outer">
+    <div id="ChartExportContainer">
+      <div class="c-chart-container" id="ChartContainer">
+        <div class="chart-inner">
+          <div class="chart-bg"></div>
+          <div class="vals">
+            <span class="val --base js-val-base"></span>
+            <span class="val --max js-val-max"></span>
+          </div>
+        </div>
+        <div class="needle-container">
+          <div class="needle js-needle">
+            <span class="needle-val --result js-val-result js-needle-val"></span>
+            <div class="needle-inner"></div>
+            <span class="needle-spin"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="c-copy-container --settings-container">
+
+    <header>Chart values and labels</header>
+
+    <div class="c-input-row">
+      <div class="c-field">
+        <input type="text" id="ChartMinVal" placeholder="">
+        <label for="ChartMinVal">Chart Min Value</label>
+      </div>
+      <div class="c-field">
+        <input type="text" id="ChartMaxVal" placeholder="">
+        <label for="ChartMaxVal">Chart Max Value</label>
+      </div>
+      <div class="c-field">
+        <input type="text" id="ChartActualVal" placeholder="">
+        <label for="ChartActualVal">Chart Actual Value</label>
+      </div>
+    </div>
+    <div class="c-input-row">
+      <div class="c-field">
+        <input type="text" id="ChartMinValLabel" placeholder="">
+        <label for="ChartMinValLabel">Chart Min Value Label</label>
+      </div>
+      <div class="c-field">
+        <input type="text" id="ChartMaxValLabel" placeholder="">
+        <label for="ChartMaxValLabel">Chart Max Value Label</label>
+      </div>
+      <div class="c-field">
+        <input type="text" id="ChartActualValLabel" placeholder="">
+        <label for="ChartActualValLabel">Chart Actual Value Label</label>
+      </div>
+    </div>
+
+
+    <button class="js-create">Create</button>
+
+    <div class="c-copy-container">
+      <header>Chart settings</header>
+      <div class="options">
+        <div class="c-field">
+          <input type="checkbox" id="FormatChartLabels" checked="checked">
+          <label for="FormatChartLabels">Format Chart Label numbers (ie: 34,000)</label>
+        </div>
+        <div class="c-field">
+          <input type="checkbox" id="MaxoutNeedle" checked="checked">
+          <label for="MaxoutNeedle">Max out needle at 110%</label>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="js-export">Export</button>
+
+    <div class="c-copy-container">
+      <header>TODO list</header>
+      <ul>
+        <li>Add buttons for 'k', '%' etc to auto add this into label values</li>
+        <li>Button to auto update labels tp use 1,000,000 format</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="c-export-container" id="ExportContainer">
+    <div class="c-exported">
+      <button class="close-btn js-close">Close</button>
+      <div class="copy">
+        <p>Right click and copy/save to use this image</p>
+      </div>
+      <img id="ExportImage" src="" />
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/dom-to-image.js"></script>
+
+</body>
+
+</html>
